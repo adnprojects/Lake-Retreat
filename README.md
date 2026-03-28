@@ -35,9 +35,3 @@ To get a local copy up and running, follow these simple steps.
 ### Prerequisites
 * A modern web browser
 * A Google Account (for the backend lead capture)
-
-### Installation
-
-1. **Clone the repo**
-   ```sh
-   git clone [https://github.com/your_username/lake-retreat-landing-page.git](https://github.com/your_username/lake-retreat-landing-page.git)
