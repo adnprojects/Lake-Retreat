@@ -15,12 +15,17 @@
                 <h2>LAKE RETREAT</h2>
                 <p>By The Earth Projects</p>
             </div>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#features">Features</a>
-                <a href="#location">Location</a>
-                <a href="Lake retreat by earth projects.pdf" class="btn btn-brochure" download>Download Brochure</a>
-                <a href="#contact" class="btn btn-outline">Enquire Now</a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#location" class="nav-link">Location</a>
+                <a href="Lake retreat by earth projects.pdf" class="btn btn-brochure nav-link" download>Download Brochure</a>
+                <a href="#contact" class="btn btn-outline nav-link">Enquire Now</a>
             </nav>
         </div>
     </header>
@@ -168,8 +173,8 @@
             <div class="footer-right">
                 <h4>Contact Us</h4>
                 <ul class="contact-info">
-                    <li><i class="fa-solid fa-envelope"></i> adn.hydprojects@gmail.com</li>
-                    <li><i class="fa-solid fa-phone"></i> +91 99492 03614</li>
+                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto:adn.hydprojects@gmail.com" class="phone-link">adn.hydprojects@gmail.com</a></li>
+                    <li><i class="fa-solid fa-phone"></i> <a href="tel:+919949203614" class="phone-link">+91 99492 03614</a></li>
                 </ul>
             </div>
 
@@ -199,6 +204,34 @@
                     submitBtn.innerText = 'Error. Try Again.';
                     submitBtn.disabled = false;
                 });
+        });
+        
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Toggle menu open/close
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            // Swap icon from hamburger to 'X'
+            const icon = mobileMenu.querySelector('i');
+            if(navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu automatically when a link or button is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenu.querySelector('i').classList.remove('fa-xmark');
+                mobileMenu.querySelector('i').classList.add('fa-bars');
+            });
         });
     </script>
 
