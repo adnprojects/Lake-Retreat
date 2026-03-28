@@ -1,0 +1,397 @@
+/* Base Styles & Resets */
+:root {
+    --primary-color: #2c4c3b; /* Deep nature green */
+    --accent-color: #d4af37;  /* Muted gold/earthy accent */
+    --text-color: #333333;
+    --bg-light: #f9f7f2;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center { text-align: center; }
+.mt-2 { margin-top: 1rem; }
+.mt-4 { margin-top: 2rem; }
+.bg-light { background-color: var(--bg-light); }
+.section-padding { padding: 5rem 0; }
+
+/* Subtitle Alignment */
+.section-subtitle { font-size: 1.1rem; color: #666; margin-bottom: 2rem; }
+.section-subtitle-center { font-size: 1.1rem; color: #666; margin-bottom: 3rem; text-align: center; }
+
+/* Utility class for centering items in flex rows */
+.align-center { align-items: center; }
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+}
+
+.btn-primary:hover {
+    background-color: #1e3529;
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+/* Navigation Brochure Button (Matches Submit Details) */
+.btn-brochure {
+    background-color: var(--primary-color);
+    color: var(--white);
+    margin-left: 15px; /* Adds a little spacing between the two buttons */
+}
+
+.btn-brochure:hover {
+    background-color: #1e3529;
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Header */
+header {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    color: var(--primary-color);
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: -5px;
+}
+
+.logo p {
+    font-size: 0.8rem;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('cover\ image.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+    color: var(--white);
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.hero-highlights span {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    backdrop-filter: blur(5px);
+}
+
+/* Lead Capture Form */
+.lead-form-container {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.lead-form-container h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.lead-form-container p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.lead-form input, .lead-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.lead-form input:focus, .lead-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Flex Layout */
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.flex-half {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Grid Layouts */
+.grid-3 {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Forced 2x2 Grid for boxes */
+.grid-2x2 {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr); /* FORCES 2 columns exactly */
+}
+
+/* Stat & Attraction Cards */
+.stat-card, .attraction-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover, .attraction-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card i, .attraction-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Feature Images */
+.feature-image {
+    width: 100%;
+    height: 450px; /* Sets a fixed height to match your screenshot */
+    object-fit: cover; /* The magic rule: prevents stretching and crops perfectly */
+    object-position: center 30%; /* Focuses slightly towards the top/center of the image */
+    border-radius: 12px; /* Slightly rounded corners to match the design */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: block;
+}
+
+/* Keep the side image styling separate if you want them to behave differently */
+.side-feature-image {
+    width: 100%;
+    max-height: 500px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* Specific styling for Overview section image */
+.side-feature-image {
+    max-height: 500px; /* limits size on large screens */
+    object-fit: cover; /* covers area if slightly cropped */
+}
+
+/* Furnishings List */
+.furnishing-list {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.furnishing-list li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.furnishing-list i {
+    color: var(--accent-color);
+    margin-right: 15px;
+}
+
+/* Connectivity Box */
+.connectivity-box {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Footer Layout */
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 4rem 0 2rem 0; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-left h2 {
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+/* Social Icons (Left) */
+.social-icons {
+    margin: 1.5rem 0;
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 1.8rem;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color); /* Turns gold on hover */
+}
+
+/* Contact Info (Right) */
+.footer-right {
+    text-align: right;
+}
+
+.footer-right h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Keeps the text right-aligned with the icons */
+    gap: 12px;
+    opacity: 0.9;
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+/* Mobile Responsive for Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-right {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .contact-info li {
+        justify-content: center; /* Centers contact info on mobile */
+    }
+    .social-icons a {
+        margin: 0 10px;
+    }
+}

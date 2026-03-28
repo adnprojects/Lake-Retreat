@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake Retreat - By The Earth Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h2>LAKE RETREAT</h2>
+                <p>By The Earth Projects</p>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#location">Location</a>
+                <a href="Lake retreat by earth projects.pdf" class="btn btn-brochure" download>Download Brochure</a>
+                <a href="#contact" class="btn btn-outline">Enquire Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Own Your Nature. <br>Live Your Escape.</h1>
+                <p>Lake Front Farm Cottages envisioned as a serene weekend retreat that blends modern rustic living with the tranquility of nature.</p>
+                <div class="hero-highlights">
+                    <span><i class="fa-solid fa-expand"></i> 605 SQY Plots</span>
+                    <span><i class="fa-solid fa-house-chimney"></i> 600 SFT Cottages</span>
+                    <span><i class="fa-solid fa-tag"></i> ₹75 Lakhs</span>
+                </div>
+            </div>
+            
+            <div class="lead-form-container" id="contact">
+                <h3>Register Your Interest</h3>
+                <p>Schedule a site visit or request a call back.</p>
+                
+                <form id="lakeRetreatForm" class="lead-form">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <select name="interest">
+                        <option value="Site visit">Schedule Site Visit</option>
+                        <option value="Call Back">Request a Call Back</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Submit Details</button>
+                </form>
+
+                <div id="successMessage" style="display:none; color: var(--primary-color); text-align: center; margin-top: 15px; font-weight: bold;">
+                    Thank you! We have received your details and will be in touch shortly.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="overview section-padding" id="about">
+        <div class="container"> <div class="flex-row overview-row align-center"> <div class="flex-half overview-image">
+                    <img src="Site Layout.jpeg" alt="Lake Retreat Scenic View" class="side-feature-image">
+                </div>
+
+                <div class="flex-half overview-content">
+                    <h2>Live. Relax. Reconnect.</h2>
+                    <p class="section-subtitle">A premium weekend home destination at Sarpanapalli Lake.</p>
+                    
+                    <div class="grid-2x2">
+                        <div class="stat-card text-center"> <i class="fa-solid fa-map-location-dot"></i>
+                            <h4>15 Acres</h4>
+                            <p>Total Land Area</p>
+                        </div>
+                        <div class="stat-card text-center">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <h4>~70 Units</h4>
+                            <p>Exclusive Plots</p>
+                        </div>
+                        <div class="stat-card text-center">
+                            <i class="fa-solid fa-water"></i>
+                            <h4>Lakefront</h4>
+                            <p>Scenic Views</p>
+                        </div>
+                        <div class="stat-card text-center">
+                            <i class="fa-solid fa-leaf"></i>
+                            <h4>Low-Density</h4>
+                            <p>Maximum Privacy</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div> </div>
+    </section>
+
+    <section class="furnishings section-padding bg-light" id="features">
+        <div class="container">
+            <div class="flex-row">
+                <div class="flex-half">
+                    <h2>Fully Furnished Luxury</h2>
+                    <p>Every 600 SFT farm cottage comes complete with premium furnishings so you can start enjoying your weekend getaway immediately.</p>
+                    <ul class="furnishing-list">
+                        <li><i class="fa-solid fa-check"></i> Queen Size Bed</li>
+                        <li><i class="fa-solid fa-check"></i> Cupboard (Almara)</li>
+                        <li><i class="fa-solid fa-check"></i> Television</li>
+                        <li><i class="fa-solid fa-check"></i> Refrigerator</li>
+                        <li><i class="fa-solid fa-check"></i> Dining Table with 4 Chairs</li>
+                        <li><i class="fa-solid fa-check"></i> Dry Kitchen & Microwave</li>
+                        <li><i class="fa-solid fa-check"></i> Seating Area (2 Chairs & 1 Table)</li>
+                        <li><i class="fa-solid fa-check"></i> Sofa cum Bed</li>
+                        <li><i class="fa-solid fa-check"></i> Electric Stove</li>
+                    </ul>
+                </div>
+                <div class="flex-half">
+                    <img src="image1.png" alt="Lake Retreat Fully Furnished Cottage" class="feature-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location section-padding" id="location">
+        <div class="container">
+            <h2 class="text-center">Surrounded by Nature & Adventure</h2>
+            <p class="text-center section-subtitle-center">Emerging as the premier weekend getaway corridor from Hyderabad.</p>
+            
+            <div class="grid-3">
+                <div class="attraction-card">
+                    <i class="fa-solid fa-mountain-sun"></i>
+                    <h4>Ananthagiri Hills</h4>
+                    <p>Dense forest, trekking trails, and lower AQI. Just minutes away.</p>
+                </div>
+                <div class="attraction-card">
+                    <i class="fa-solid fa-vihara"></i>
+                    <h4>Spiritual Tourism</h4>
+                    <p>Close to the historic Anantha Padmanabha Swamy Temple.</p>
+                </div>
+                <div class="attraction-card">
+                    <i class="fa-solid fa-campground"></i>
+                    <h4>Kotpally Reservoir</h4>
+                    <p>Enjoy water sports, kayaking, and serene camping experiences.</p>
+                </div>
+            </div>
+
+            <div class="connectivity-box text-center mt-4">
+                <h3>Location Highlights</h3>
+                <p>📍 Sarpanapalli Lake | 🚗 10 Minutes from Vikarabad Town</p>
+                <p>Situated in a pollution-free green belt zone, surrounded by agricultural lands and forest ecosystems. A peaceful, low-crowd destination featuring kayaking, camping, picnics, and photography.</p>
+                <a href="https://maps.app.goo.gl/u5BuBjGt4g7UURJq6?g_st=iw" target="_blank" class="btn btn-outline mt-2">View on Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            
+            <div class="footer-left">
+                <h2>LAKE RETREAT</h2>
+                <p>By The Earth Projects</p>
+                <div class="social-icons">
+                    <a href="YOUR_FACEBOOK_LINK_HERE" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="YOUR_INSTAGRAM_LINK_HERE" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <p class="copyright">© 2026 Lake Retreat. All rights reserved.</p>
+            </div>
+            
+            <div class="footer-right">
+                <h4>Contact Us</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-envelope"></i> adn.hydprojects@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 99492 03614</li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('lakeRetreatForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+        
+        // PASTE YOUR GOOGLE SCRIPT URL HERE
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwuw6tBvqn9NdW-0rAz8fbD2pX5nvhLaCuTpuZtLOxxkU6nlfgfRDLfpVFkW1lpGHhh/exec'; 
+
+        form.addEventListener('submit', e => {
+            e.preventDefault(); 
+            submitBtn.innerText = 'Saving Details...'; 
+            submitBtn.disabled = true;
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    form.style.display = 'none'; 
+                    successMessage.style.display = 'block'; 
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    submitBtn.innerText = 'Error. Try Again.';
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+
+</body>
+</html>
