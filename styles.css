@@ -378,8 +378,61 @@ footer {
     opacity: 0.6;
 }
 
-/* Mobile Responsive for Footer */
+/* Mobile Menu Toggle (Hidden on Desktop) */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Responsive / Mobile Styles */
 @media (max-width: 768px) {
+    .hero-text h1 { font-size: 2.5rem; }
+    
+    /* Header & Mobile Menu Layout */
+    .header-container { 
+        flex-direction: row; /* Keeps logo and hamburger on same line */
+        justify-content: space-between;
+        position: relative; /* Allows the menu to drop down from the header */
+    }
+    
+    .menu-toggle {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    /* Hide standard nav and turn it into a dropdown menu */
+    nav {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Positions it directly below the header */
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        padding: 1.5rem 0;
+        text-align: center;
+        z-index: 999;
+    }
+
+    /* This class is added by JavaScript when the hamburger is clicked */
+    nav.active {
+        display: flex; 
+    }
+
+    /* Style the links and buttons inside the mobile menu */
+    nav a { 
+        margin: 10px auto; 
+        display: block;
+        width: 90%;
+    }
+    
+    .btn-brochure {
+        margin-left: auto; /* Resets the desktop margin */
+    }
+
+    /* Footer Mobile Fixes */
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -389,9 +442,18 @@ footer {
         margin-top: 1rem;
     }
     .contact-info li {
-        justify-content: center; /* Centers contact info on mobile */
+        justify-content: center;
     }
     .social-icons a {
         margin: 0 10px;
     }
+}
+/* Override Apple's default phone number styling */
+.phone-link, a[href^="tel"] {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.phone-link:hover {
+    color: var(--accent-color);
 }
